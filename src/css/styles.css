@@ -16,3 +16,251 @@
 @import url('./badges.css');
 @import url('./back-link.css');
 @import url('./footer.css');
+
+* {
+  box-sizing: border-box;
+}
+
+.timer-container {
+  margin: 36px 156px;
+}
+
+.timer-container input {
+  border-radius: 4px;
+  border: 1px solid #808080;
+  width: 272px;
+  height: 40px;
+  background-color: #fff;
+  padding: 8px 16px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.timer-container input:hover {
+  border: 1px solid #000;
+}
+
+.timer-container input:focus {
+  border: 1px solid #4e75ff;
+}
+
+.flatpickr-calendar {
+  margin-top: 8px !important;
+  font-family: 'Montserrat', sans-serif !important;
+  border-radius: 8px !important;
+  background-color: #f5f5f5 !important;
+  border: none !important;
+  padding: 16px !important;
+  width: 280px !important;
+  height: 352px !important;
+}
+
+.flatpickr-calendar input {
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  text-align: center !important;
+  color: #333 !important;
+}
+
+.flatpickr-weekdays {
+  max-width: 242px !important;
+  background: #f5f5f5 !important;
+  font-weight: 500 !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+  text-align: center !important;
+  color: #2e2f42 !important;
+}
+
+.flatpickr-rContainer {
+  max-width: 242px !important;
+}
+.flatpickr-days {
+  width: 242px !important;
+}
+.dayContainer {
+  max-width: 242px !important;
+  text-align: center !important;
+  row-gap: 16px;
+}
+
+.flatpickr-day {
+  border-radius: 100% !important;
+  width: 32px !important;
+  height: 32px !important;
+  line-height: 32px !important;
+  text-align: center !important;
+  max-width: 32px !important;
+}
+
+.flatpickr-day.today {
+  border: 1px solid #4e75ff !important;
+}
+
+.flatpickr-day:hover {
+  background: #c1c1c1 !important;
+}
+
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange {
+  background: #4e75ff !important;
+  color: white !important;
+}
+/*
+.flatpickr-time.time24hr {
+  padding-top: 16px;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  color: #333;
+} */
+button[data-start] {
+  padding: 8px 16px;
+  margin-left: 8px;
+  border: none;
+  border-radius: 8px;
+  width: 75px;
+  height: 40px;
+  background-color: #4e75ff;
+
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  font-family: 'Montserrat', sans-serif;
+  transition: background 0.3s ease;
+}
+
+button[data-start]:disabled {
+  background-color: #cfcfcf;
+  color: #989898;
+  cursor: not-allowed;
+}
+
+button[data-start]:disabled input {
+  color: #808080;
+  background: #fafafa;
+}
+
+button[data-start]:hover:not(:disabled) {
+  background-color: #6c8cff;
+}
+
+/* Таймер */
+.timer {
+  display: flex;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.value {
+  font-size: 40px;
+  color: #2e2f42;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  font-family: Montserrat, sans-serif;
+}
+
+.label {
+  font-size: 16px;
+  color: #2e2f42;
+  text-transform: uppercase;
+
+  line-height: 1.5;
+  font-family: Montserrat, sans-serif;
+}
+
+.error-toast {
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: #fff;
+}
+
+/* snackbar */
+.form {
+  width: 360px;
+  margin: 36px 156px;
+  font-family: Montserrat, sans-serif;
+}
+
+.form label {
+  font-size: 16px;
+}
+
+input[name='delay'] {
+  width: 100%;
+  padding: 8px 12px;
+  margin-top: 8px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+  font-size: 16px;
+}
+
+fieldset {
+  margin-top: 16px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #808080;
+}
+
+.state {
+  margin-top: 24px;
+  margin-left: 48px;
+  margin-bottom: 8px;
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2e2f42;
+}
+
+input[name='state'] {
+  width: 20px;
+  height: 20px;
+}
+
+legend {
+  padding: 0 4px;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+button[type='submit'] {
+  margin-top: 24px;
+  height: 40px;
+  width: 100%;
+  padding: 8px auto;
+  border: none;
+  background-color: #4e75ff;
+  border-radius: 8px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type='submit']:hover {
+  background-color: #6c8cff;
+}
